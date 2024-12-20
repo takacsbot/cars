@@ -9,3 +9,6 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 Route::get('/cars', [CarController::class, "index"]);
 Route::get('/cars/{id}', [CarController::class, "show"]);
+Route::post('/cars', [CarController::class, "store"]);
+Route::delete('/cars/{id}', [CarController::class, "destroy"]);
+Route::put('/cars/{id}', [CarController::class, "update"]);
